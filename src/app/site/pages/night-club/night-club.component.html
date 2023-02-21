@@ -1,0 +1,272 @@
+<main class="">
+
+    <nav class="nav">
+        <div class="container">
+            <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="py-header welcome">
+        <div>
+            <div class="text-center">
+                <h3 class="nc-subtitle-text-lg">Welcome to the Party</h3>
+                <h1 class="nc-title">JOIN THE CLUB</h1>
+            </div>
+        </div>
+    </section>
+    <section class="py-header about">
+        <div class="container text-center">
+            <div class="pb-title page-title">
+                <h4 class="nc-subtitle-text"> No,1 Night Club</h4>
+                <h2 class="nc-subtitle">ABOUT THE CLUB</h2>
+            </div>
+            <p class="nc-text-lg text-center">Night Club 128, born of the namesake catch phrase, “1 of a kind,” has
+                endured
+                continuous
+                waves of competition
+                and
+                outlasted the rise and fall of countless nightlife trends. Located on 17th street in the heart of
+                Chelsea,
+                it
+                remains at the center of New York City nightlife culture.</p>
+            <button class="nc-button nc-button--primary"> Contact Us</button>
+        </div>
+    </section>
+    <section class="py-header video">
+        <div class="container">
+            Clubers Union
+        </div>
+    </section>
+    <section class="py-header party-host">
+        <div class="container">
+            <div class="pb-title page-title text-center">
+                <h4 class="nc-subtitle-text"> Meet Our</h4>
+                <h2 class="nc-subtitle text-light">OUR PARTY HOSTS</h2>
+            </div>
+            <div class="host-wrapper media-responsive">
+                <div class="host">
+                    <img src="/assets/images/p03.jpeg" alt="RONALD JAMES">
+                    <div class="host__details">
+                        <h5 class="text-light">RONALD JAMES</h5>
+                        <p class="text-primary mb-0">Top 100 Dj's</p>
+                    </div>
+                </div>
+                <div class="host">
+                    <img src="/assets/images/p02.jpeg" alt="ETTA GREEN">
+                    <div class="host__details">
+                        <h5 class="text-light">ETTA GREEN</h5>
+                        <p class="text-primary mb-0">New York Dj</p>
+                    </div>
+                </div>
+                <div class="host">
+                    <img src="/assets/images/p04.jpeg" alt="MATTHEW CUSSACK">
+                    <div class="host__details">
+                        <h5 class="text-light">MATTHEW CUSSACK</h5>
+                        <p class="text-primary mb-0">Dancer</p>
+                    </div>
+                </div>
+                <div class="host">
+                    <img src="/assets/images/p01.jpeg" alt="JENNIFER ALDO">
+                    <div class="host__details">
+                        <h5 class="text-light">JENNIFER ALDO</h5>
+                        <p class="text-primary mb-0">Owner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-header services">
+        <div class="container">
+            <div class="service-wrapper media-responsive">
+                <div class="service">
+                    <img src="/assets/images/c01.png" alt="CORPORATE EVENTS">
+                    <div class="event-details">
+                        <h5>CORPORATE EVENTS</h5>
+                        <p>Creativity corporate events from concept and design, right through to production and
+                            management
+                            of the
+                            event
+                            itself.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="/assets/images/c01.png" alt="CORPORATE EVENTS">
+                    <div class="service-details">
+                        <h5>BRANDED EVENTS</h5>
+                        <p>Our branded events provide unmatched opportunities for you to interact with customers make
+                            the
+                            brand even
+                            stronger
+                            and recognizable.</p>
+                    </div>
+
+                </div>
+                <div class="service">
+                    <img src="/assets/images/c01.png" alt="CORPORATE EVENTS">
+                    <div class="service-details">
+                        <h5>COMERCIAL SHOOTS</h5>
+                        <p>We provide productions services for commercials, branded media, film/TV or documentary shoots
+                            in
+                            many
+                            pavilions.</p>
+                    </div>
+
+                </div>
+                <div class="service">
+                    <img src="/assets/images/c01.png" alt="CORPORATE EVENTS">
+                    <div class="service-details">
+                        <h5>HEN PARTIES</h5>
+                        <p>Create hen party memories that will last a lifetime with our the hen party specialists.</p>
+                    </div>
+
+                </div>
+                <div class="service">
+                    <img src="/assets/images/c01.png" alt="CORPORATE EVENTS">
+                    <div class="service-details">
+                        <h5>BIRTHDAY PARTIES</h5>
+                        <p>Our birthday party services include live DJs, dancing, bottle service and much more.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="/assets/images/c01.png" alt="CORPORATE EVENTS">
+                    <div class="service-details">
+                        <h5>VIP SERVICE</h5>
+                        <p>From individual club VIP packages and bottle services to closed exclusive parties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-header events">
+        <div class="container">
+            <div class="pb-title page-title text-center">
+                <h4 class="nc-subtitle-text">Dates For Our</h4>
+                <h2 class="nc-subtitle">UPCOMING PARTIES</h2>
+            </div>
+            <p class="text-center nc-text-lg">View our event calendar to see upcoming events. Purchase tickets, VIP Bar
+                Cards, or
+                reserve VIP tables with
+                bottle
+                service.</p>
+            <div class="nc-tabs">
+                <ul class="nc-tabs__list">
+                    <li class="nc-tabs__list__item" [ngClass]="{'nc-tabs__list__item--active': activeTab === 0}"><button
+                            class="nc-button nc-button--block" (click)="changeTab(0)">Friday</button>
+                    </li>
+                    <li class="nc-tabs__list__item" [ngClass]="{'nc-tabs__list__item--active': activeTab === 1}"><button
+                            class="nc-button nc-button--block" (click)="changeTab(1)">Saturday</button>
+                    </li>
+                    <li class="nc-tabs__list__item" [ngClass]="{'nc-tabs__list__item--active': activeTab === 2}"><button
+                            class="nc-button nc-button--block" (click)="changeTab(2)">Sunday</button>
+                    </li>
+                </ul>
+                <div class="nc-tabs__content__wrapper" [ngSwitch]="activeTab">
+                    <div *ngSwitchCase="0" class="nc-tabs__content">
+                        <h3>Friday {{activeTab}}</h3>
+                    </div>
+                    <div *ngSwitchCase="1" class="nc-tabs__content">
+                        <h3>Saturday {{activeTab}}</h3>
+                    </div>
+                    <div *ngSwitchCase="2" class="nc-tabs__content">
+                        <h3>Sunday {{activeTab}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="py-header gallery">
+        <div class="container">
+            Club Gallery
+            <div class="gallery-wrapper">
+
+            </div>
+        </div>
+    </section>
+    <section class="py-header reservation">
+        <div class="container">
+            <div class="contact-wrapper media-responsive">
+                <div class="contact">
+                    <div class="pb-title page-title">
+                        <h4 class="nc-subtitle-text"> Questions?</h4>
+                        <h2 class="nc-subtitle">CONTACT US</h2>
+                    </div>
+                    <p>Fill out the form to attend the most anticipated events in the city and get your tickets for the
+                        best
+                        night party today for you and your friends.</p>
+                    <div class="offices">
+                        Slider
+                    </div>
+                    <div class="social-media"></div>
+                </div>
+                <div class="reserve">
+                    <div class="pb-title page-title">
+                        <h2 class="nc-subtitle"> WANT TO RESERVE?</h2>
+                    </div>
+                    <h3>FORM</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-header customer-statements">
+        <div class="container">
+            They say
+        </div>
+    </section>
+    <section class="py-header news">
+        <div class="container">
+
+            <div class="pb-title page-title text-center">
+                <h4 class="nc-subtitle-text"> Our Blog</h4>
+                <h2 class="nc-subtitle">READ THE LATEST NEWS</h2>
+            </div>
+            August 30, 2022
+            in World
+            ED SHEERAN CONFIRMS WEDDING DATE
+            Ed Sheeran has released a new music video which sees him seemingly confirming when he married …
+
+
+            July 30, 2022
+            in World
+            NEW AMY WINEHOUSE EXHIBITION
+            A new exhibition focused on Amy Winehouse is set to open next month, it has been announced. …
+
+
+            December 2, 2022
+            in World
+            LONDON'S WIDE AWAKE FESTIVAL
+            So we know that Solomun is the label boss of Diynamic and started it in …
+
+
+            October 10, 2022
+            in World
+            INTERVIEW - SOLOMUN
+            So we know that Solomun is the label boss of Diynamic and started it in …
+
+
+            October 10, 2022
+            in World
+            LOFI NIGHTS ARE BACK
+            If you listened to music on YouTube over the past year, it's inevitable that you've …
+
+
+            October 10, 2022
+            in World
+            DECK SELECTA DJ COMPETITION
+            Calling all DJ's! Ever dreamt on playing on board IT'S THE SHIP alongside with some …
+        </div>
+    </section>
+    <section class="py-header footer">
+        <div class="container">
+            <div class="text-center">
+                footer
+            </div>
+        </div>
+    </section>
+</main>

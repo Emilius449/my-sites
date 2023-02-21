@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "../src/assets/scss/font";
+@import "../src/assets/scss/variable";
+@import "../src/assets/scss/mixin/breakpoint";
+@import "../src/assets/scss/reset";
+@import "../src/assets/scss/root";
+@import "../src/assets/scss/base";
+@import "../src/assets/scss/pages/night-club";
+ul {
+  &.list-unstyled {
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.text-light {
+  color: var(--color-light);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.m-0 {
+  margin: 0;
+}
+.my-0 {
+  margin-block: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.py-header {
+  padding: var(--specing-desktop) 0px;
+}
+.pb-title {
+  padding-bottom: var(--title-specing-desktop);
+}
+// Tables and landscape phones, greater than 768px)
+//@media (min-width: 768px) and (max-width: 991.98px)
+@include media-breakpoint-only(md) {
+  .container {
+    padding-inline: var(--grid-gap-sm);
+  }
+  .py-header {
+    padding: var(--specing-tablet) 0px;
+  }
+  .pb-title {
+    padding-bottom: var(--title-specing-tablet);
+  }
+}
+// small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(md) {
+  .container {
+    padding-inline: var(--grid-gap-sm);
+  }
+  .py-header {
+    padding: var(--specing-mobile) 0px;
+  }
+  .pb-title {
+    padding-bottom: var(--title-specing-mobile);
+  }
+}

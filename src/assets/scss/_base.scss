@@ -1,0 +1,120 @@
+html {
+  font-size: 10px;
+  line-height: 1.1;
+}
+body {
+  font-family: var(--ff-primary);
+}
+p,
+a,
+button {
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+p {
+  margin-bottom: 2rem;
+}
+h1 {
+  font-size: 6.5rem;
+  line-height: 1.2em;
+}
+h2 {
+  font-size: 5rem;
+  line-height: 1.2em;
+}
+h3 {
+  font-size: 4rem;
+  line-height: 1.2em;
+}
+h4 {
+  font-size: 3rem;
+  line-height: 1.1em;
+  margin-bottom: 2rem;
+}
+h5 {
+  font-size: 2rem;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+h6 {
+  font-size: 1.8rem;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+
+.nc {
+  &-title {
+    font-family: var(--ff-secondary);
+    font-size: 13.4rem;
+  }
+  &-subtitle {
+    font-family: var(--ff-secondary);
+  }
+  &-subtitle-text {
+    font-family: var(--ff-accent);
+    font-size: 3.5rem;
+    color: var(--color-primary);
+    &-lg {
+      font-family: var(--ff-accent);
+      font-size: 7.6rem;
+    }
+  }
+
+  &-text-lg {
+    font-size: 1.8rem;
+  }
+
+  // Button
+  &-button {
+    min-width: 18rem;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: transparent;
+    border: 0.15rem solid none;
+    border-color: inherit;
+    color: inherit;
+    cursor: pointer;
+    &--primary {
+      border: 0.15rem solid var(--color-primary);
+      color: var(--color-light);
+    }
+    &--block {
+      display: block;
+      width: 100%;
+    }
+  }
+  //Overlapping content
+  &-overlap {
+    display: grid;
+    > * {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+  &-tabs {
+    &__list {
+      list-style: none;
+      display: grid;
+      grid-auto-flow: column;
+      &__item {
+        transition: color 0.25s ease-in-out;
+        > button {
+          border: none;
+          border-bottom: 0.25rem solid lightgray;
+          transition: border 0.25s ease-in-out;
+        }
+        &--active {
+          > button {
+            border: none;
+            color: var(--color-primary);
+            border-bottom: 0.25rem solid var(--color-primary);
+          }
+        }
+      }
+    }
+    &__content__wrapper {
+      // border: 1px solid lightgreen;
+    }
+  }
+}

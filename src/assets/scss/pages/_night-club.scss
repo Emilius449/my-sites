@@ -1,0 +1,98 @@
+nav {
+  .container {
+    ul {
+      display: grid;
+      grid-auto-flow: column;
+      gap: var(--grid-gap-sm);
+      li {
+        background-color: lightblue;
+        width: 100%;
+      }
+    }
+  }
+}
+section {
+  &:nth-child(odd) {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
+  &:nth-child(even) {
+    background-color: rgba($color: #0040e2, $alpha: 0.5);
+  }
+  &.about {
+    > div.container {
+      max-width: 840px;
+    }
+  }
+  &.party-host {
+    background-color: #000000;
+    .host-wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--grid-gap-2);
+      .host {
+        img {
+          aspect-ratio: 1/1;
+          width: 100%;
+          object-fit: cover;
+        }
+        &__details {
+          padding-block: var(--card-padding);
+          align-self: end;
+        }
+      }
+    }
+  }
+  &.services {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    .service-wrapper {
+      background-color: rgba(var(--color-rgb-primary), 0.35);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5px;
+      .service {
+        display: grid;
+        grid-auto-flow: column;
+        background: #0d0d0d;
+        padding: var(--card-padding);
+      }
+    }
+  }
+  &.events {
+    > div > p {
+      max-width: 840px;
+      margin-inline: auto;
+    }
+  }
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap-sm);
+  }
+}
+@include media-breakpoint-only(md) {
+  section {
+    .event-wrapper.media-responsive,
+    .host-wrapper.media-responsive {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include media-breakpoint-down(md) {
+  section {
+    .event-wrapper.media-responsive,
+    .host-wrapper.media-responsive,
+    .contact-wrapper.media-responsive {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &.service .event-wrapper .event {
+      grid-auto-flow: row;
+      justify-items: center;
+      text-align: center;
+      .event-details {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
