@@ -5,11 +5,15 @@ html {
 body {
   font-family: var(--ff-primary);
 }
+* {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
 p,
 a,
 button {
   font-size: 1.4rem;
-  line-height: 1.1;
+  line-height: 1.7;
 }
 p {
   margin-bottom: 2rem;
@@ -25,6 +29,7 @@ h2 {
 h3 {
   font-size: 4rem;
   line-height: 1.2em;
+  margin-bottom: 2rem;
 }
 h4 {
   font-size: 3rem;
@@ -43,6 +48,9 @@ h6 {
   font-weight: 700;
 }
 
+.p-5 {
+  padding: 5rem;
+}
 .nc {
   &-title {
     font-family: var(--ff-secondary);
@@ -63,6 +71,9 @@ h6 {
 
   &-text-lg {
     font-size: 1.8rem;
+  }
+  &-text-sm {
+    font-size: 1.3rem;
   }
 
   // Button
@@ -93,18 +104,18 @@ h6 {
     }
   }
   &-tabs {
-    &__list {
+    > .nc-tabs__list {
       list-style: none;
       display: grid;
       grid-auto-flow: column;
-      &__item {
+      > .nc-tabs__list__item {
         transition: color 0.25s ease-in-out;
         > button {
           border: none;
           border-bottom: 0.25rem solid lightgray;
           transition: border 0.25s ease-in-out;
         }
-        &--active {
+        &.nc-tabs__list__item--active {
           > button {
             border: none;
             color: var(--color-primary);
@@ -113,8 +124,55 @@ h6 {
         }
       }
     }
-    &__content__wrapper {
-      // border: 1px solid lightgreen;
+
+    &.nc-tabs--vertical {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 6fr;
+      > .nc-tabs__list {
+        grid-auto-flow: row !important;
+        grid-template-rows: 1fr 1fr 1fr;
+        > .nc-tabs__list__item {
+          border: 0.2rem solid transparent;
+          border-right-color: var(--color-primary);
+          &.nc-tabs__list__item--active {
+            border-color: var(--color-primary);
+            border-right: none;
+          }
+          > a {
+            padding: 0;
+            > img {
+              width: 100%;
+              object-fit: cover;
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+      }
+      > .nc-tabs__content__wrapper {
+        border: 0.2rem solid var(--color-primary);
+        border-left: none;
+        > .nc-tabs__content {
+          display: grid;
+          > * {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            background-image: linear-gradient(
+              90deg,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 0.289)
+            );
+            p {
+              max-width: 500px;
+            }
+          }
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+          aspect-ratio: 16/9;
+        }
+      }
     }
   }
 }

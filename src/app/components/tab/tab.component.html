@@ -1,0 +1,64 @@
+<div class="nc-tabs nc-tabs--vertical">
+    <ul class="nc-tabs__list">
+        <li class="nc-tabs__list__item" [ngClass]="{'nc-tabs__list__item--active': activeTab === 0}"><a
+                class="nc-button nc-button--block" (click)="changeTab(0)">
+                <img src="/assets/images/t01.jpg" alt="Tab image">
+            </a>
+        </li>
+        <li class="nc-tabs__list__item" [ngClass]="{'nc-tabs__list__item--active': activeTab === 1}"><a
+                class="nc-button nc-button--block" (click)="changeTab(1)">
+                <img src="/assets/images/t02.jpg" alt="Tab image"></a>
+        </li>
+        <li class="nc-tabs__list__item" [ngClass]="{'nc-tabs__list__item--active': activeTab === 2}"><a
+                class="nc-button nc-button--block" (click)="changeTab(2)">
+                <img src="/assets/images/t03.jpg" alt="Tab image"></a>
+        </li>
+    </ul>
+    <div class="nc-tabs__content__wrapper" [ngSwitch]="activeTab">
+        <div *ngSwitchCase="0" class="nc-tabs__content">
+            <img src="/assets/images/t01.jpg" alt="Tab image">
+            <div class="p-5">
+                <h4 class="nc-subtitle-text">$37</h4>
+                <h3 class="nc-subtitle">Deep Massive Drops</h3>
+                <p class="nc-text-sm text-primary">06 december / doors open at 23:00</p>
+                <p>Decorated in shades of decadent jewels, dripping with lights and a bangin' sound system,
+                    Saturdays go
+                    hand in hand with SEDUCTION. Prepare yourself for the convergence of beauty and debauchery and let
+                    DJ
+                    Karen take over your body with her wicked mix of Latin, House & Hip Hop.</p>
+
+                <button class="nc-button nc-button--primary"> Get Tickets</button>
+            </div>
+        </div>
+        <div *ngSwitchCase="1" class="nc-tabs__content">
+            <img src="/assets/images/t02.jpg" alt="Tab image">
+            <div class="p-5">
+                <h4 class="nc-subtitle-text">$37</h4>
+                <h3 class="nc-subtitle">Deep Massive Drops</h3>
+                <p class="nc-text-sm text-primary">06 december / doors open at 23:00</p>
+                <p>Decorated in shades of decadent jewels, dripping with lights and a bangin' sound system,
+                    Saturdays go
+                    hand in hand with SEDUCTION. Prepare yourself for the convergence of beauty and debauchery and let
+                    DJ
+                    Karen take over your body with her wicked mix of Latin, House & Hip Hop.</p>
+
+                <button class="nc-button nc-button--primary"> Get Tickets</button>
+            </div>
+        </div>
+        <div *ngSwitchCase="2" class="nc-tabs__content">
+            <img src="/assets/images/t03.jpg" alt="Tab image">
+            <div class="p-5">
+                <h4 class="nc-subtitle-text">$37</h4>
+                <h3 class="nc-subtitle">Deep Massive Drops</h3>
+                <p class="nc-text-sm text-primary">06 december / doors open at 23:00</p>
+                <p>Decorated in shades of decadent jewels, dripping with lights and a bangin' sound system,
+                    Saturdays go
+                    hand in hand with SEDUCTION. Prepare yourself for the convergence of beauty and debauchery and let
+                    DJ
+                    Karen take over your body with her wicked mix of Latin, House & Hip Hop.</p>
+
+                <button class="nc-button nc-button--primary"> Get Tickets</button>
+            </div>
+        </div>
+    </div>
+</div>
